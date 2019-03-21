@@ -88,3 +88,20 @@ var secondString = "hell!";
 console.log("`${firstString + secondString}`");
 
 console.log(`${firstString + secondString}`);
+
+console.log("String interpolation (inserting values from other objects into a string) used to be done only with '+' concatination, like so;\r");
+
+console.log("'Left side is equal to ' + leftSide + ' and right side is equal to ' + rightSide\r");
+
+var leftSide = 10;
+var rightSide = 20;
+
+console.log("Left side is equal to " + leftSide + " and right side is equal to " + rightSide);
+
+console.log("Now we can inject the values directly into template literals using the same ${textGoesHere} syntax as used for concatination");
+
+console.log("var leftSide = 10;\nvar rightSide = 20;\n");
+
+console.log("console.log(`Left side is equal to ${leftSide} and right side is equal to ${rightSide}.`)\r");
+
+console.log(`Left side is equal to ${leftSide} and right side is equal to ${rightSide}.`);
