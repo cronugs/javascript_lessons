@@ -163,3 +163,61 @@ console.log('var array2 = ["one", "three", "four", "five", "six"];\r');
 var array2 = ["one", "three", "four", "five", "six"];
 console.log('console.log(array2.fill("a", 1, 3));\r');
 console.log(array2.fill("a", 1, 3));
+console.log("\r");
+
+console.log("Concatenating arrays\r");
+console.log(`Just like concatenating strings we can also concatenate arrays. We call the same concat() method. It does not change the original
+arrays. It creates a new array\r`);
+console.log("\r");
+
+var firstLetters = ["a", "b", "c"];
+var secondLetters = ["x", "y", "z"];
+console.log(`var firstLetters = ["a", "b", "c"];
+var secondLetters = ["x", "y", "z"];\r`);
+console.log("\r");
+
+var newArray1 = firstLetters.concat(secondLetters);
+var newArray2 = secondLetters.concat(firstLetters);
+console.log(`var newArray1 = firstLetters.concat(secondLetters);\r`);
+console.log(`var newArray2 = secondLetters.concat(firstLetters);\r`);
+console.log("\r");
+
+console.log("console.log(newArray1);\r");
+console.log("console.log(newArray2);\r");
+console.log("\r");
+
+console.log(newArray1);
+console.log(newArray2);
+console.log("\r");
+
+console.log("Multidimensional Arrays\r");
+console.log("\r");
+
+console.log(`var myArray = [ [val1, val2, val3], [val4, val5, val6] ]; We can see that myArray
+  has only two values, that are two subarrays. It means that myArray[0] will return the first subarray:
+  [val1, val2, val3], while myArray[1] will return the second subarray [val4, val5, val6]. Each subarray has
+  three values. If we want to select items in subarrays, then we nees to add one more set of brackets
+  with an index as shown in the example below:\r`);
+console.log("\r");
+
+var twoDimensionalArray = [
+	["a", "b", "c"],
+	["d", "e", "f"],
+	["g", "h", "i"]
+];
+console.log(`var twoDimensionalArray = [
+  ["a", "b", "c"],
+  ["d", "e", "f"],
+  ["g", "h", "i"]
+];\r`);
+console.log("\r");
+
+console.log("console.log(twoDimensionalArray);\r");
+console.log("\r");
+
+console.log(twoDimensionalArray);
+console.log("\r");
+
+console.log("console.log(twoDimensionalArray[0][2]);\r");
+console.log("\r");
+console.log(twoDimensionalArray[0][2]);

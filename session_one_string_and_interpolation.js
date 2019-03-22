@@ -19,9 +19,9 @@ var c = 30;
 console.log(a, b, c);
 
 
-var myString = "Call me a mad cunt ";
+var myString = "Call me a mad lad ";
 
-console.log("result of indexOf() on the string 'call me a mad cunt'\r");
+console.log("result of indexOf() on the string 'call me a mad lad'\r");
 
 console.log(myString.indexOf('c'));
 
@@ -68,13 +68,13 @@ console.log(concatinatedString);
 
 console.log("We can also concatinate by calling the concat method on our first string and provide the strings to be concatinated as args to concat()\r");
 
-console.log("var str1 = 'You ';\nvar str2 = 'mad ';\nvar str3 = 'cunt! ';\n");
+console.log("var str1 = 'You ';\nvar str2 = 'mad ';\nvar str3 = 'lad! ';\n");
 
 console.log("str1.concat(str2, str3);\r");
 
 var str1 = "You ";
 var str2 = "mad ";
-var str3 = "cunt! ";
+var str3 = "lad! ";
 
 console.log(str1.concat(str2, str3));
 
