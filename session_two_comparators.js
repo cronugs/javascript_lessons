@@ -357,3 +357,157 @@ if (2 > 1) {
 		console.log("Nested if condition is executed");
 	}
 }
+console.log("\r");
+
+console.log(`if (1 > 3) {
+  console.log("if statement is executed");
+
+  if (1 > 0) {
+    console.log("Nested if statement is executed");
+  }
+} else {
+  console.log("Else statement is executed");
+}/r`);
+console.log("\r");
+
+if (1 > 3) {
+	console.log("if statement is executed");
+
+	if (1 > 0) {
+		console.log("Nested if statement is executed");
+	}
+} else {
+	console.log("Else statement is executed");
+}
+console.log("\r");
+
+console.log(`Let's examine these results. The first condition is false, so we skip to the else statement. The nested statement is skipped entirely.\r`);
+console.log("\r");
+
+console.log(`if (5 > 2) {
+  console.log("If statement here!");
+
+  if (1 > 3) {
+    console.log("Nested if statement!");
+  } else {
+    console.log("Nested else statement");
+  }
+} else {
+  console.log("Regular else statement");
+}\r`);
+console.log("\r");
+
+if (5 > 2) {
+	console.log("If statement here!");
+
+	if (1 > 3) {
+		console.log("Nested if statement!");
+	} else {
+		console.log("Nested else statement");
+	}
+} else {
+	console.log("Regular else statement");
+}
+console.log("\r");
+
+console.log("Switch\r");
+console.log("\r");
+
+console.log("Switch compares each case to the value of the expression. It is useful when there are many cases to be checked\r");
+console.log("\r");
+
+console.log(`var fruit = "banana";
+
+switch (fruit) {
+  case "apple":
+    console.log("This is an apple");
+    break;
+
+  case "lemon":
+    console.log("This is a lemon");
+    break;
+
+  case "strawberry":
+    console.log("This is a strawberry");
+    break;
+
+  case "banana":
+    console.log("Now that's a banana");
+    break;
+
+  default:
+    console.log("this is the default value when none of the cases were true");
+}\r`);
+console.log("\r");
+
+var fruit = "banana";
+
+switch (fruit) {
+	case "apple":
+		console.log("This is an apple");
+		break;
+
+	case "lemon":
+		console.log("This is a lemon");
+		break;
+
+	case "strawberry":
+		console.log("This is a strawberry");
+		break;
+
+	case "banana":
+		console.log("Now that's a banana");
+		break;
+
+	default:
+		console.log("this is the default value when none of the cases were true");
+}
+console.log("\r");
+
+console.log(`There are a lot of new keywords in the previous example. You will notice that we first declared a variable
+  fruit and assigned a string "banana" to it. Now we want to check whether some other strings are "banana". In this case
+  we have many such strings, so we are going to need a switch statement.
+
+  First, we write a switch that has an expression. This expression is what we want to compare cases to. We compare "apple"
+  to the fruit variable, that is the string "banana". All of the cases, as well as the default keyword, need to be wrapped
+  in curly brackets {}.
+
+  Now we get the case keyword. Each case is compared to the expression until the correct value is found. If the match is
+  now found, then the code in default condition will be executed. In the next example, if we remove the case for "banana",
+  the code from the default statement will show up:\r`);
+console.log("\r");
+
+console.log(`switch (fruit) {
+  case "apple":
+    console.log("That is an apple");
+    break;
+
+  case "lemon":
+    console.log("ffs bro, you can do better than that... at least it's yellow I guess.");
+    break;
+
+  case "strawberry":
+    console.log("Jesus fuck! You were closer with the lemon.");
+    break;
+
+  default:
+    console.log("This is the default value, we will settle on your mediocrity");
+}`)
+
+switch (fruit) {
+	case "apple":
+		console.log("That is an apple");
+		break;
+
+	case "lemon":
+		console.log("ffs bro, you can do better than that... at least it's yellow I guess.");
+		break;
+
+	case "strawberry":
+		console.log("Jesus fuck! You were closer with the lemon.");
+		break;
+
+	default:
+		console.log("This is the default value, we will settle on your mediocrity");
+}
+console.log("\r");
