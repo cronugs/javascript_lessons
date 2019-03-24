@@ -159,3 +159,50 @@ Array.from(string);`);
 var string = "Cool string";
 console.log(Array.from(string));
 console.log("\r");
+
+console.log("Numbers to Strings");
+console.log("\r");
+
+console.log(`Coverting numbers to strings is straightforward with toString() method on a number with an argument in patenthesis that specifies the numeral
+system. When we say number, of course, we do not just mean the decimal (base-10) number system. It equally applies to other standard number ststems such as
+base-16 (hexadecimal), base-8 (octal), and base-2 (binary)`);
+console.log("\r");
+
+console.log(`var a = 12;
+var b = 13;
+var c = 22;
+var d = 15;`);
+console.log("\r");
+
+var a = 12;
+var b = 13;
+var c = 22;
+var d = 15;
+
+console.log("Regular number to string");
+console.log("\r");
+console.log("var num1 = a.toString();");
+var num1 = a.toString();
+console.log(num1);
+console.log("\r");
+
+console.log("To binary");
+console.log("\r");
+console.log("var num2 = b.toString(2);");
+var num2 = b.toString(2);
+console.log(num2);
+console.log("\r");
+
+console.log("To octal");
+console.log("\r");
+console.log("var num3 = c.toString(8);");
+var num3 = c.toString(8);
+console.log(num3);
+console.log("\r");
+
+console.log("To Hexadecimal");
+console.log("\r");
+console.log("var num4 = d.toString(16);");
+var num4 = d.toString(16);
+console.log(num4);
+console.log("\r");
