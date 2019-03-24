@@ -206,3 +206,62 @@ console.log("var num4 = d.toString(16);");
 var num4 = d.toString(16);
 console.log(num4);
 console.log("\r");
+
+console.log("Strings to Numbers");
+console.log("\r");
+console.log(`You can also take a numeric string and convert it back to numbers.`);
+console.log("\r");
+
+console.log(`var string1 = "12";
+
+var number1 = parseInt(string1);
+var number2 = Number(string1);
+
+var string2 = "3.41";
+var number3 = parseFloat(string2);
+`);
+
+var string1 = "12";
+
+var number1 = parseInt(string1);
+var number2 = Number(string1);
+
+var string2 = "3.41";
+var number3 = parseFloat(string2);
+
+console.log(number1, number2, number3);
+console.log("\r");
+console.log("and check if they are numbers");
+console.log("\r");
+console.log(`console.log(typeof(number1));
+console.log(typeof(number2));
+console.log(typeof(number3));`);
+
+console.log(typeof(number1));
+console.log(typeof(number2));
+console.log(typeof(number3));
+console.log("\r");
+
+console.log("Boolean Conversion");
+console.log("\r");
+
+console.log(`It depends on what you want to convert your boolean to. We can use toString() method again to convert boolean to a string.
+If you're going to convert a boolean value to a number, then use Number() function.`);
+console.log("\r");
+
+console.log(`var string = true.toString();
+var number1 = Number(true);
+var number2 = Number(false);`);
+console.log("\r");
+
+var string = true.toString();
+var number1 = Number(true);
+var number2 = Number(false);
+
+console.log(`console.log(string, number1, number2);
+console.log(typeof(string));`);
+console.log("\r");
+
+console.log(string, number1, number2);
+console.log(typeof(string));
+console.log("\r");
