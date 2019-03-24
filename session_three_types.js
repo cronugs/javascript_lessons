@@ -265,3 +265,85 @@ console.log("\r");
 console.log(string, number1, number2);
 console.log(typeof(string));
 console.log("\r");
+
+console.log(`Unary and binary operators convert boolean to a number. Therefore we can perfom arithmetic operations with boolean values.
+These operators convert true to a number and false to a 0.`);
+console.log("\r");
+
+console.log(`These operators convert true to 1 and false to 0`);
+console.log("\r");
+console.log("Unary operators");
+console.log("\r");
+console.log(`console.log(+true);
+console.log(+false);`);
+console.log("\r");
+
+console.log(+true);
+console.log(+false);
+console.log("\r");
+
+console.log("Binary operators");
+console.log("\r");
+console.log(`console.log(true / 1);
+console.log(false * 1);
+console.log(false - false);
+console.log(false + true);
+console.log(true / true);`);
+console.log("\r");
+
+console.log(true / 1);
+console.log(false * 1);
+console.log(false - false);
+console.log(false + true);
+console.log(true / true);
+console.log("\r");
+
+console.log("Implicit Type Conversion");
+console.log("\r");
+console.log("Sometimes a data type will get changes automatically, like in the cause of an int being added to a string");
+console.log("\r");
+
+console.log(`var stringBoolean = ("true" + true);
+console.log(typeof(stringBoolean));`);
+console.log("\r");
+
+var stringBoolean = ("true" + true);
+console.log(stringBoolean);
+console.log(typeof(stringBoolean));
+console.log("\r");
+
+console.log(`var stringNumber = ("banana" + 2);
+console.log(typeof(stringNumber));`);
+console.log("\r");
+
+var stringNumber = ("banana" + 2);
+console.log(stringNumber);
+console.log(typeof(stringNumber));
+console.log("\r");
+
+console.log(`var numberBoolean = (2 * true);
+console.log(typeof(numberBoolean));`);
+console.log("\r");
+
+var numberBoolean = (2 * true);
+console.log(numberBoolean);
+console.log(typeof(numberBoolean));
+console.log("\r");
+
+console.log(`var stringNumber2 = ("2" + 5);
+console.log(typeof(stringNumber2));`);
+console.log("\r");
+
+var stringNumber2 = ("2" + 5);
+console.log(stringNumber2);
+console.log(typeof(stringNumber2));
+console.log("\r");
+
+console.log(`var stringMultiplied = ("string" * 3);
+console.log(typeof(stringMultiplied));`);
+console.log("\r");
+
+var stringMultiplied = ("string" * 3);
+console.log(stringMultiplied);
+console.log(typeof(stringMultiplied));
+console.log("\r");
