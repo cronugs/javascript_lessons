@@ -50,7 +50,7 @@ var withNumber = languages.join("1");
 var withWord = languages.join("and");\r`);
 console.log("\r");
 
-var languages =['JavaScript', 'python', 'ruby', 'java', 'c#'];
+var languages = ['JavaScript', 'python', 'ruby', 'java', 'c#'];
 
 var noDelimiter = languages.join("");
 var withComma = languages.join(",");
@@ -303,6 +303,11 @@ console.log("\r");
 console.log("Sometimes a data type will get changes automatically, like in the cause of an int being added to a string");
 console.log("\r");
 
+console.log("Example 1 - Add a boolean to a string");
+console.log("\r");
+console.log(`In this example we add a string and a boolean. JavaScript converts the boolean to a string and concatinates it.`);
+console.log("\r");
+
 console.log(`var stringBoolean = ("true" + true);
 console.log(typeof(stringBoolean));`);
 console.log("\r");
@@ -310,6 +315,11 @@ console.log("\r");
 var stringBoolean = ("true" + true);
 console.log(stringBoolean);
 console.log(typeof(stringBoolean));
+console.log("\r");
+
+console.log("Example 2 - Add a number to a string");
+console.log("\r");
+console.log(`In this example JavaScript converts the int to a sting and concatinates it.`);
 console.log("\r");
 
 console.log(`var stringNumber = ("banana" + 2);
@@ -321,6 +331,11 @@ console.log(stringNumber);
 console.log(typeof(stringNumber));
 console.log("\r");
 
+console.log("Example 3 - Multiply a boolean");
+console.log("\r");
+console.log(`In this example we see that when we multiply a boolean, it is first converted to an int, then it is multiplied.`)
+console.log("\r");
+
 console.log(`var numberBoolean = (2 * true);
 console.log(typeof(numberBoolean));`);
 console.log("\r");
@@ -330,6 +345,11 @@ console.log(numberBoolean);
 console.log(typeof(numberBoolean));
 console.log("\r");
 
+console.log("Example 4 - Add a number to a string containing a numeral");
+console.log("\r");
+console.log(`In this example we have a string containing a numeral and an int. The int is converted to a string and concatinated.`);
+console.log("\r");
+
 console.log(`var stringNumber2 = ("2" + 5);
 console.log(typeof(stringNumber2));`);
 console.log("\r");
@@ -337,6 +357,11 @@ console.log("\r");
 var stringNumber2 = ("2" + 5);
 console.log(stringNumber2);
 console.log(typeof(stringNumber2));
+console.log("\r");
+
+console.log("Example 5 - Multiply a string");
+console.log("\r");
+console.log(`In this example we see that you cannot multiply a string by a number. The result is NaN`);
 console.log("\r");
 
 console.log(`var stringMultiplied = ("string" * 3);
