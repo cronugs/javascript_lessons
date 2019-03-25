@@ -256,3 +256,140 @@ console.log("\r");
 
 console.log("Nested loops - Part One");
 console.log("\r");
+
+console.log(`Nested loops are loops within loops. They run an interation within an iteration.`);
+console.log("\r");
+
+console.log(`for (statement1; statement2; statement3;) {
+  code block to be executed;
+  for (statement4; statement5, statement6) {
+    code block to be executed;
+  }
+}`);
+console.log("\r");
+
+console.log(`First we will create a two-dimsional array`);
+console.log("\r");
+
+console.log(`var arr = [[1,2], [3,4], [5,6], [7,8]];`);
+
+var arr = [
+	[1, 2],
+	[3, 4],
+	[5, 6],
+	[7, 8]
+];
+console.log("\r");
+
+console.log(`console.log
+	for (var i = 0; i < arr.length; i++) {
+		console.log(arr[i]);
+	}`);
+console.log("\r");
+
+for (var i = 0; i < arr.length; i++) {
+	console.log(arr[i]);
+}
+
+console.log(`
+for (var i = 0; i < arr.length; i++) {
+	console.log(arr[i]);
+}
+`);
+console.log("\r");
+
+for (var i = 0; i < arr.length; i++) {
+	console.log(arr[i]);
+}
+console.log("\r");
+
+console.log(`
+First we create an array and begin out loop by initialising i and setting it to 0. Then we used the
+for keyword to create a for loop. In the parenthesis, we set the i variable to 0. Therefore counting
+will start at 0. The next statement is conditional:
+
+	i < arr.length;
+
+This means;
+iterate as long as the variable i is less than the length of arr, in our
+case four.Therefore the loop will run
+until the variable i is no longer less than 4.
+
+The next satement;
+i++is the incrementor.
+
+On the next line we access items in the array by their index.The result of the arr[0] is going to be the first nested.The
+next one will be arr[1] and it will
+return the second nested array.
+`)
+console.log("\r");
+
+console.log("Nested Loops - Part Two");
+
+console.log(`We need another loop to access items in the subarray, a loop that will iterate through arrays
+that are nested in the first array
+
+array[index][index];
+
+For that, we need another incrementor and another loop, the nested loop. We called it j and set it to 0. We
+need to make sure that this nested loop stops when there are no other items in the subarray, meaning when the
+incrementor, this time called j, is less than the length of each subarray. All of our subarrays have only two
+items which mean that j will need to be less than 2. When it goes to 2, the nested loop will stop. The incrementor,
+j variable, in this case, will be either 0 or 1`);
+console.log("\r");
+
+console.log(`var arr = [
+	[1, 2],
+	[3, 4],
+	[5, 6],
+	[7, 8]
+];
+
+for (var i = 0; i < arr.length; i++) {
+	for (var j = 0; j < arr[i].length; j++) {
+		console.log(j);
+	}
+}`);
+console.log("\r");
+
+var arr = [
+	[1, 2],
+	[3, 4],
+	[5, 6],
+	[7, 8]
+];
+
+for (var i = 0; i < arr.length; i++) {
+
+	for (var j = 0; j < arr[i].length; j++) {
+		console.log(j);
+	}
+}
+console.log("\r");
+
+console.log(`Now we are going to get the item that is positioned at each index 0 and 1.`);
+console.log("\r");
+
+for (var i = 0; i < arr.length; i++) {
+
+	for (var j = 0; j < arr[i].length; j++) {
+		console.log(arr[i][j]);
+	}
+}
+console.log("\r");
+
+console.log("Infinite Loops");
+console.log("\r");
+
+console.log(`Infinite loops usually happen by mistake due to some bug in your code. It will run the block code an Infinite
+number of times and probably crash your brower or app. Let's crank an example.`);
+console.log("\r");
+
+console.log(`var i = 0;
+
+for (i; i < 1; i--) {
+	console.log(i);
+}`);
+console.log("\r");
+console.log(`This code will run forever because it ends when i is greater than 1, but because i is decrimented every 
+iteration it never reaches 1 and the loop continues infinitely`);
