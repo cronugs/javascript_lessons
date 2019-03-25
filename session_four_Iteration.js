@@ -162,3 +162,97 @@ while (i < 10) {
 	console.log("i is: " + i + " and that is less than 10");
 	i++;
 }
+console.log("\r");
+
+console.log("Do While Loops");
+console.log("\r");
+
+console.log(`Do while loop will run the block code at least once even thought the condition is false. It means that block code runs
+before the condition is checked. The condition comes after the block code. This loop is used if you want to run block code at least
+once no matter what. Do while loop will stop iteration when the condition is false.`);
+console.log("\r");
+
+console.log(`var i = 0;
+do {
+	console.log("I am happy!");
+	i++;
+} while (i < 10);`);
+console.log("\r");
+
+var i = 0;
+do {
+	console.log("i is " + i + " and that is less than 10");
+	i++;
+} while (i < 10);
+console.log("\r");
+
+console.log(`We set the variable i to 0 first, then the code block runs. Then in the same block, i was incremented by 1. Only after that,
+the condition will be checked (i < 10). So it doesn't check if 0 is less than 10. Variable i was incremented by one before the condition.
+The first time iteration came to the condition, i was already 1. When it bacame 9, code was executed, i was incremented by 1, it became
+10, which is not less than 10, the condition was false and the loop stopped. But notice that if we set the variable i at the beginning
+of the iteration to any number higher than 10, code block will run once.`);
+console.log("\r");
+
+console.log(`var i = 10;
+do {
+	console.log("i is " + i);
+} while (i < 10);`);
+console.log("\r");
+
+var i = 10;
+do {
+	console.log("i is " + i);
+} while (i < 10);
+console.log("\r");
+
+console.log("Break");
+console.log("\r");
+
+console.log(`The keyword break stops the iteration and exits the loop no matter which step the iteration is currently on.`);
+console.log("\r");
+
+console.log(`var i;
+for (i = 0; i < 5; i++) {
+	if (i == 3) {
+		break;
+	}
+	console.log("i: " + i);
+}`);
+console.log("\r");
+
+var i;
+for (i = 0; i < 5; i++) {
+	if (i == 3) {
+		break;
+	}
+	console.log("i: " + i);
+}
+console.log("\r");
+
+console.log("Continue");
+console.log("\r");
+
+console.log(`The continue keyword skips one iteration and continues on with the next one. It does not break or exit the loop. Notice
+in the next example that there is no three. It was skipped because of the continue keyword.`);
+console.log("\r");
+
+console.log(`var i;
+for (i = 0; i < 10; i++) {
+	if (i == 3) {
+		continue;
+	}
+	console.log(i);
+}`);
+console.log("\r");
+
+var i;
+for (i = 0; i < 10; i++) {
+	if (i == 3) {
+		continue;
+	}
+	console.log(i);
+}
+console.log("\r");
+
+console.log("Nested loops - Part One");
+console.log("\r");
