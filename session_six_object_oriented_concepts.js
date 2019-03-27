@@ -111,4 +111,99 @@ There are some differences in syntax between literal notation and function const
 colons while constructors use = signs for defining properties. Constructor function uses the this keyword which references  the current
 object when adding data to it. Literal notation doesn't use this keyword for properties keys.
 
-Constructor Function - Part Two`);
+Constructor Function - Part Two
+
+In the previous example, we just created an object Car. We didn't use it. To use it, we need to instantiate it. That means we have to create an instance
+of our object. To do that we call the object and provide the required arguments. The keyword new is necessary to instantiate the object. We
+assign the newly created instane to a variable name myCar. Consequently myCar variable stores an instance of an object names Car with properties
+specific to myCar. Therefore our object that is stored in the myCar variable is an instance of the Car object. Also, we can call all of the Methods
+and properties that Car object has on our instance.
+
+function Car(year, owner, manufacturer) {
+	this.year = year;
+	this.owner = owner;
+	this.manufacturer = manufacturer;
+	this.speak = function() {
+		console.log('vreeeeeyaaaah');
+	};
+}
+
+let myCar = new Car("1965", "Ann", "Ford");
+myCar.speak();
+console.log(myCar.year, myCar.owner);`);
+
+function Car(year, owner, manufacturer) {
+	this.year = year;
+	this.owner = owner;
+	this.manufacturer = manufacturer;
+	this.speak = function() {
+		console.log('vreeeeeyaaaah');
+	};
+}
+console.log("\r");
+
+let myCar = new Car("1965", "Ann", "Ford");;
+console.log("\r");
+myCar.speak();
+
+console.log(myCar.year, myCar.owner);
+console.log("\r");
+console.log('console.log(myCar instanceof Car);');
+console.log(myCar instanceof Car);
+
+console.log(`Overriding
+
+Updating property values and methods inthe derived class, it updates property values and methods. You can override a function if you declare
+it again after the original declaration.
+
+function saySomething() {
+  console.log("Something!");
+}
+
+function saySomething() {
+  console.log("Something else");
+}
+
+saySomething();
+`);
+console.log("\r");
+
+function saySomething() {
+	console.log("Something!");
+}
+
+function saySomething() {
+	console.log("Something else");
+}
+
+saySomething();
+console.log("\r");
+
+console.log(`This - Part one
+
+So far we know that an object stores data. What if we want to reference that data from within the same object? How can we get to it?
+That is why we need to this keyword. If there is no this keyword, we will get a referenceError. JavaScript would not know that these two
+variables were already defined. It couldn't get to them.`);
+
+var person = {
+	firstName: "Judy",
+	lastName: "Smith",
+	hello: function() {
+		// notice the template literal and string interpolation
+		console.log(`My name is: ${this.firstName} ${this.lastName}`);
+	}
+};
+
+person.hello();
+
+console.log(`This - Part Two
+
+Aint much in Part two so we will skip directly to part three
+
+This - Part three
+
+Int he precious lesson, we talked about the this keyword. We got to the global object. This time we are going to create an object with a function
+and a property named type. The humanise function lets our fruit talk. Wow, JS can so magic! We're gonna let the banana introduce itself by Calling
+the function the same way we called function expressions. The first thing is to save it in the variable and then call it on the next line.
+
+`);
