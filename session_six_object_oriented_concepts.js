@@ -323,4 +323,159 @@ console.log(country.name);
 
 undefined
 
+Exceptions
+
+Exceptions are a mechanism in JavaScript for handling mistakes. It stops the code and goes back to the line of code where it knows
+how to handle the problem. Add it to areas of code where errors may happen.
+
+You will probably make lots of mistakes while codeing in JS. In fact, errors and exceptions should be taken as guidance to correct coding.
+sometimes you will want to create your own custom errors. Default built-in JS errors will not be good enough, and this is when you should
+use a try... catch...finally statement. It will help you to detect an error, catch it and execute the code accordingly. That statement
+is the primary topic of this lecture. When an error occurs, further code execution stops. The JS interpreter will be so dismissive of you,
+that it won't even bother to look at any code after the mistake you made. First, fix the mess, then you can talk to JS!
+
+Try-Catch
+
+Try-catch is a statement that handles errors. Uses in a statement to catch a particular error and execute code as an error happens.
+First, try to spot an error in the try statement. If an error doesn't happen, continue with the execution:
+
+try {
+	console.log("No errors detected!");
+
+} catch(err) {
+
+	console.log('catch is skipped, because there are no errors');
+}
+
+console.log("Execution continues");
+
+No errors spotted!
+Execution continues
+
+If an error occurs, execute the code from the catch statement
+
+try {
+	helloWorld();
+} catch(err) {
+	console.log("Error occured and the catch statement was executed");
+}
+
+console.log("the execution continues");
+
+Error occured and the catch statement was executed
+the execution continues
+
+try {
+	helloWorld();
+} catch(cupcake) {
+	console.log(cupcake.name);
+	console.log(cupcake.message);
+	console.log("Please define a helloWorld function");
+}
+
+ReferenceError
+helloWorld is not defined
+Please define a helloWorld function
+
+Finally
+
+Finally is the last part of the try-catch statement. It executes the code whether or not the exception was thrown. Finally should be 
+used when you want to clean up after the error mess.
+
+function openPandoraBox() {}
+function closePandoraBox() {
+	console.log('closing....')
+} try { 
+	openPandoraBox();
+	sneekpeak();
+}
+
+finally {
+	closePandoraBox();
+}
+
+closing...
+ReferenceError: sneekpeak is not defined
+    at eval:6:2
+    at eval
+	at new Promise
+
+
+Here is a different example.
+
+var numbers = [1,2,3,4,5, "banana", null];
+
+var i = 0, total = 0;
+while(i < numbers.length) {
+	try {
+		if ((typeof numbers[i] != "number") || isNaN(numbers[i])) {
+			continue;
+		}
+		total += numbers[i];
+	}
+	finally {
+		console.log("Finally statement executed!");
+		i++;
+		console.log(total);
+	}
+}
+
+Finally statement executed!
+1
+Finally statement executed!
+3
+Finally statement executed!
+6
+Finally statement executed!
+10
+Finally statement executed!
+15
+Finally statement executed!
+15
+Finally statement executed!
+15
+
+We didn't use the catch statement inthe example above because try will never have an error. So catch will have nothing to catch. Ok, 
+don't be overwhelmed with the code. We are taking it step by step. So, on the first line, we declared an array that has seven items which
+means that the length of the array is 7. then we used a while loop. We set two variables; i and total. The var i is used as an incrementor
+and total is the sum of all the numbers in the array. So the while loop will be executed until the i is no longer less than the length of
+the array which is equal to 7.
+
+Now to the fun part. In the try statement, we have an if statement that checks if var i is something other than a number, either if the 
+result of the typeof numbers[i] is something other than the number type or if the result of the NaN(numbers[i]) is true. If either of
+these two expressions returns true, then the code in the if statement will be executed. So if the number in the array is a number, then
+add that number to the total sum. If it is not a number, then skip the iteration with the continue statement and move on to the next one.
+
+Now to the finally statement. The variable i in the finally statement will be incremented by 1 in each iteration. It is going to be 
+numbers[0], numbers[1], numbers[2], numbers[3], numbers[4].
+
+That is it. We used a finally statement to make sure that i is increased by 1 in each iteration. There are, as always, other ways to 
+achieve the same result. Finally statement will be executed no matter what. Its code will run after try and catch statments regardless of
+the result.
+
+Throw
+
+It is an operator which throws a user-defined exception. The syntax is throw <error object>
+Let's have an example
+
+Let person = {"age": 30, firstName: "Jane"};
+
+try {
+	if (!person.occupancy) {
+		throw new Error ("No such property as occupancy");
+		console.log("You will never get to me!");
+	}
+} catch(e) {
+	alert("Error: + e.message);
+}
+
+Error: No such property as occupancy
+
+Instead of having the default JS message for an error, we defined out own on the 5th line. We could have written anythng we want. Feel
+free to add some funny sentences and rerun the code in the message. So when the interpreter realised there is no occupancy property on
+the person object, throw generated a new instance of the error object with the message. As a consequence, our object has a propety message
+with a string "No such property as occupancy". When we use alert to show the error message, it will be that same message because we created
+it for the error object with the throw operator. The critical thing to note that no other statement after the throw operator will be executed.
+The interpreter moves to the catch statement. Therefore that 6th line will never run.
+
 `);
