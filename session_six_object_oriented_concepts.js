@@ -206,4 +206,121 @@ Int he precious lesson, we talked about the this keyword. We got to the global o
 and a property named type. The humanise function lets our fruit talk. Wow, JS can so magic! We're gonna let the banana introduce itself by Calling
 the function the same way we called function expressions. The first thing is to save it in the variable and then call it on the next line.
 
+let fruit = {
+	type: "banana",
+	humanize: function() {
+		console.log('Although I am a ' + this.type +', I can still talk!');
+	}
+};
+
+let weirdFunction = fruit.humanize;
+weirdFunction();
+
+When we run this we get undefined instead of 'banana'. This is because the variable weirdFunction got a function as a value. The this keyword
+in that function no longer has any connection with the fruit object. That is because this is set when we execute the function, not when we 
+define it. So again we got to the global object, not the fruit object as we wanted to.
+
+Getting object values
+
+You read object values by using the objects key
+
+var country = {
+	name: "Croatia",
+	pop: 4.224,
+	sea: true,
+	islands: 1000,
+	language: "croatian"
+};
+
+console.log(country.name);
+console.log(country.pop);
+console.log(country.islands);
+
+Croatia
+4.224
+1000
+
+You call the name of the property on the object by using dot notation: objectName.property. This is the case no matter how you created
+the object.
+
+/* Function constructor */
+
+function Mammal(type, sound) {
+	this.type = type;
+	this.sound = sound;
+}
+let doggie = new Mammal("dog", "woof");
+console.log(doggie.type);
+console.log(doggie.sound);
+
+/* Object constructor*/
+
+let mammal = new Object();
+mammal.type = "dog";
+mammal.sound = "woof";
+console.log(mammal.type);
+console.log(mammal.sound);
+
+If you have an object that has another object as a property, then you can use dot notation twice to get the property of the inner object
+
+let tree = {
+	species: "olive tree",
+	age: 101,
+	location: "Zadar",
+	leaves: {
+		amount: 1000,
+		color: "green"	
+	}
+};
+
+console.log(tree.leaves.amount);
+console.log(tree.leaves.color);
+
+1000
+green
+
+Updating Object Values
+
+We can change the value of properties using the same syntax; objectName.property and assign a new value to it. This works the same no
+matter which of the three ways an object was created.
+
+var country = {
+	name: "Croatia",
+	population: 4.224,
+	sea: true,
+	islands: 1000,
+	language: "croatian",
+	bio: function() {
+		console.log(this.name + " is a country with " + this.population + " people");
+	}
+};
+
+country.name = "Ireland";
+console.log(country.name);
+country.bio()
+}
+
+Ireland
+Ireland is a country with 4.224 people
+
+Deleteing Object Properties
+
+Properties can be deleted by using the delete keyword along with the objectName.property. This will delete both the key and the value.
+
+var country = {
+	name: "Croatia",
+	population: 4.224,
+	sea: true,
+	islands: 1000,
+	language: "croatian",
+	bio: function() {
+		console.log(this.name + " is a country with " + this.population + " people");
+	}
+};
+
+delete country.name;
+console.log(country.name);
+
+undefined
+
 `);
